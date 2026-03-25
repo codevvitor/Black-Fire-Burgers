@@ -1,5 +1,42 @@
-body {  
-background-color: #1C1C1C
+body {
+    background-color: #000;
+    font-family: Arial, sans-serif;
+    text-align: center;
 }
 
+/* Texto branco */
+.text-color {
+    color: #FFFFFF;
+}
 
+/* Logo */
+.logo {
+    width: 300px;
+    margin-top: 20px;
+}
+
+/* Produto */
+.produto {
+    margin: 30px auto;
+    max-width: 300px;
+}
+
+/* Imagens dos produtos */
+.imagem-produto {
+    width: 250px;
+    height: 250px;
+    object-fit: cover; /* evita imagem “torta” */
+    border-radius: 10px;
+}
+
+/* Botão */
+.botao {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: #00BB2D;
+    color: #FFFFFF;
+    border-radius: 30px;
+    margin-top: 10px;
+    text-decoration: none;
+}
