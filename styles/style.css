@@ -1,57 +1,192 @@
+/* ================================
+   BASE
+================================ */
 body {
     background-color: #000;
     font-family: Arial, sans-serif;
     text-align: center;
 }
 
-/* Texto branco */
 .text-color {
-    color: #FFFFFF;
+    color: #fff;
 }
 
-/* Logo */
+/* ================================
+   BANNER
+================================ */
+.banner {
+    background: url("../img/banner.png") no-repeat center / cover;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .logo {
     width: 300px;
-    margin-top: 20px;
+    margin-bottom: 30px;
 }
 
-/* Produto */
+.banner h1 {
+    color: #FFD700;
+    font-size: 40px;
+    margin: 10px 0;
+}
+
+.endereco {
+    color: #ccc;
+    font-size: 14px;
+}
+
+/* ================================
+   PROMOÇÃO
+================================ */
+.promocao {
+    background-color: #FFD700;
+    padding: 30px 20px;
+    margin: 30px 0;
+}
+
+.promo-container h2 {
+    color: #000;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.promo-texto {
+    font-size: 20px;
+    color: #000;
+    margin: 10px 0;
+}
+
+.promo-preco {
+    font-size: 30px;
+    font-weight: bold;
+    color: #000;
+    margin: 10px 0;
+}
+
+.botao-promo {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 15px 30px;
+    background-color: #000;
+    color: #FFD700;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 30px;
+}
+
+/* ================================
+   PRODUTOS
+================================ */
+.produtos-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
 .produto {
-    margin: 30px auto;
-    max-width: 300px;
+    background-color: #1e1e1e;
+    padding: 15px;
+    border-radius: 15px;
+    width: 250px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-/* Imagens dos produtos */
+.produto:hover {
+    transform: scale(1.05);
+}
+
 .imagem-produto {
     width: 250px;
     height: 250px;
-    object-fit: cover; /* evita imagem “torta” */
+    object-fit: cover;
     border-radius: 10px;
 }
 
-/* Botão */
+/* ================================
+   BOTÃO
+================================ */
 .botao {
     display: inline-block;
     padding: 15px 30px;
     font-size: 18px;
     background-color: #00BB2D;
-    color: #FFFFFF;
+    color: #fff;
     border-radius: 30px;
     margin-top: 10px;
     text-decoration: none;
 }
-/* Card de Avaliação*/
+
+/* ================================
+   AVALIAÇÕES
+================================ */
 .card-avaliacao {
-    background-color: #1e1e1e;
+    background-color: #2e2e2e;
     padding: 15px;
     border-radius: 15px;
     margin: 10px 0;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-/* Imagem da Promo */
-.imagem-promo {
-    width: 450px;
-    height: 250px;
-    object-fit: cover; /* evita imagem “torta” */
+/* ================================
+   WHATSAPP FLUTUANTE
+================================ */
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366;
+    color: #fff;
+    font-size: 30px;
+    text-align: center;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 50%;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 999;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+}
+
+/* ================================
+   RESPONSIVO
+================================ */
+@media (max-width: 768px) {
+    .banner {
+        height: 300px;
+    }
+
+    .banner h1 {
+        font-size: 28px;
+    }
+
+    .slogan {
+        font-size: 16px;
+    }
+
+    .imagem-promo {
+        width: 100%;
+        height: auto;
+    }
+
+    .produto {
+        width: 90%;
+    }
 }
